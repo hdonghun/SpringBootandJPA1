@@ -80,6 +80,7 @@ public class Order {
     // 조회 로직
     // 전체 주문 가격 조회
     public int getTotalPrice() {
+
         return orderItems.stream().mapToInt(OrderItem::getTotalPrice).sum();
     }
     // 위에 코드의 기존코드 아래(인텔리제이 깔끔하게 만들어준것)

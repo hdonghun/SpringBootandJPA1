@@ -16,10 +16,12 @@ public class MemberRepository {
     private final EntityManager em;  // Spring이  EntityManager을 를 em에 inject해준다.
 
     public void save(Member member){
+
         em.persist(member);
     }
 
     public Member findOne(Long id) {
+
         return em.find(Member.class, id);
     }
 
